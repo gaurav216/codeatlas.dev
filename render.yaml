@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: codeatlas-dev
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: BASE_URL
+        value: https://codeatlas.dev

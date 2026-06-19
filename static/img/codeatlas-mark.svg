@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>codeatlas.dev mark</title>
+  <rect width="64" height="64" rx="14" fill="#10221c"/>
+  <path d="M18 21h28M18 32h28M18 43h28" stroke="#d6f36a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M24 16v32M40 16v32" stroke="#7bdcb5" stroke-width="4" stroke-linecap="round"/>
+</svg>

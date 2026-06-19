@@ -1,0 +1,14 @@
+.git
+.gitignore
+.DS_Store
+Dockerfile
+render.yaml
+bin/
+tmp/
+dist/
+coverage.out
+*.test
+*.log
+node_modules/
+.env
+.env.*

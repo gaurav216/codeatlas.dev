@@ -1,0 +1,217 @@
+:root {
+  color-scheme: dark;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+.prose-dark {
+  color: rgb(203 213 225);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.prose-dark > * + * {
+  margin-top: 1.25rem;
+}
+
+.prose-dark h1,
+.prose-dark h2,
+.prose-dark h3,
+.prose-dark h4 {
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.prose-dark h2 {
+  margin-top: 2.75rem;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+}
+
+.prose-dark h3 {
+  margin-top: 2rem;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+}
+
+.prose-dark p,
+.prose-dark li {
+  color: rgb(203 213 225);
+}
+
+.prose-dark a {
+  color: rgb(103 232 249);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.prose-dark a:hover {
+  color: rgb(165 243 252);
+  text-decoration: underline;
+}
+
+.prose-dark ul,
+.prose-dark ol {
+  padding-left: 1.4rem;
+}
+
+.prose-dark ul {
+  list-style: disc;
+}
+
+.prose-dark ol {
+  list-style: decimal;
+}
+
+.prose-dark blockquote {
+  border-left: 3px solid rgb(34 211 238);
+  color: rgb(226 232 240);
+  margin-left: 0;
+  padding-left: 1rem;
+}
+
+.prose-dark :not(pre) > code {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 0.45rem;
+  background: rgba(15, 23, 42, 0.86);
+  color: rgb(165 243 252);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 0.13rem 0.35rem;
+}
+
+.prose-dark pre {
+  overflow-x: auto;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 1rem;
+  background: rgba(2, 6, 23, 0.92);
+  color: rgb(226 232 240);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-top: 1.5rem;
+  padding: 1.1rem;
+}
+
+.prose-dark pre code {
+  background: transparent;
+  color: inherit;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 0;
+}
+
+.code-shell {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.code-shell pre {
+  margin-top: 0;
+  padding-top: 3rem;
+}
+
+.copy-code {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  z-index: 2;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  color: rgb(203 213 225);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+}
+
+.copy-code:hover,
+.copy-code:focus {
+  color: white;
+  border-color: rgba(34, 211, 238, 0.65);
+  outline: none;
+}
+
+.mermaid {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.72);
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+}
+
+.toc-link {
+  border-left: 2px solid rgba(148, 163, 184, 0.18);
+  display: block;
+  padding: 0.25rem 0 0.25rem 0.75rem;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.toc-link:hover,
+.toc-link:focus {
+  border-color: rgb(34 211 238);
+  color: rgb(165 243 252);
+  outline: none;
+}
+
+.toc-link--h3 {
+  margin-left: 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.chroma {
+  background: transparent;
+  color: rgb(226 232 240);
+}
+
+.chroma .k,
+.chroma .kd,
+.chroma .kn,
+.chroma .kr {
+  color: rgb(192 132 252);
+  font-weight: 700;
+}
+
+.chroma .s,
+.chroma .s1,
+.chroma .s2 {
+  color: rgb(134 239 172);
+}
+
+.chroma .c,
+.chroma .c1,
+.chroma .cm {
+  color: rgb(100 116 139);
+  font-style: italic;
+}
+
+.chroma .nf,
+.chroma .nx,
+.chroma .na {
+  color: rgb(103 232 249);
+}
+
+.chroma .mi,
+.chroma .mf {
+  color: rgb(251 191 36);
+}
+
+@media (max-width: 640px) {
+  .prose-dark {
+    font-size: 1rem;
+  }
+
+  .prose-dark pre {
+    border-radius: 0.85rem;
+    font-size: 0.85rem;
+  }
+}

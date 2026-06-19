@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 390" role="img" aria-labelledby="title">
+  <title>codeatlas.dev study map</title>
+  <rect width="520" height="390" rx="22" fill="#f3f7f1"/>
+  <path d="M74 118c80-58 165-57 255 3 43 29 82 33 117 12" fill="none" stroke="#1f6f5b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M75 260c63-40 124-46 182-18 73 36 139 32 198-13" fill="none" stroke="#d79b2b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M104 311c49-25 88-25 117 0 38 32 78 23 119-25 28-33 61-43 99-30" fill="none" stroke="#4169a9" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#10221c">
+    <circle cx="74" cy="118" r="13"/>
+    <circle cx="184" cy="88" r="13"/>
+    <circle cx="329" cy="121" r="13"/>
+    <circle cx="446" cy="133" r="13"/>
+    <circle cx="75" cy="260" r="13"/>
+    <circle cx="257" cy="242" r="13"/>
+    <circle cx="455" cy="229" r="13"/>
+    <circle cx="104" cy="311" r="13"/>
+    <circle cx="221" cy="311" r="13"/>
+    <circle cx="340" cy="286" r="13"/>
+    <circle cx="439" cy="256" r="13"/>
+  </g>
+  <g fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700">
+    <text x="67" y="126">&lt;</text>
+    <text x="177" y="96">{}</text>
+    <text x="322" y="129">fn</text>
+    <text x="439" y="141">db</text>
+    <text x="68" y="268">O</text>
+    <text x="250" y="250">go</text>
+    <text x="448" y="237">sum</text>
+    <text x="97" y="319">#</text>
+    <text x="214" y="319">[]</text>
+    <text x="333" y="294">io</text>
+    <text x="432" y="264">fn</text>
+  </g>
+</svg>
