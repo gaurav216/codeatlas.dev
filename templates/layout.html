@@ -1,6 +1,6 @@
 {{define "base"}}
 <!doctype html>
-<html lang="en" class="scroll-smooth bg-slate-950">
+<html lang="en" class="scroll-smooth bg-slate-50">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,17 +28,15 @@
           },
           colors: {
             atlas: {
-              ink: "#020617",
-              panel: "rgba(15, 23, 42, 0.72)",
-              line: "rgba(148, 163, 184, 0.22)",
-              cyan: "#22d3ee",
-              violet: "#8b5cf6",
-              green: "#34d399",
-              amber: "#fbbf24"
+              ink: "#0f172a",
+              cyan: "#0891b2",
+              emerald: "#059669",
+              violet: "#7c3aed",
+              amber: "#d97706"
             }
           },
           boxShadow: {
-            glow: "0 0 48px rgba(34, 211, 238, 0.16)"
+            soft: "0 18px 45px rgba(15, 23, 42, 0.08)"
           }
         }
       }
@@ -46,15 +44,13 @@
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <link rel="stylesheet" href="/static/css/styles.css">
-  <script defer src="/static/js/main.js"></script>
+  <link rel="stylesheet" href="/static/css/styles.css?v=light-1">
+  <script defer src="/static/js/main.js?v=light-1"></script>
 </head>
-<body class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-cyan-300 selection:text-slate-950">
+<body class="min-h-screen bg-slate-50 text-slate-950 antialiased selection:bg-cyan-200 selection:text-slate-950">
   <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-    <div class="absolute left-1/2 top-[-12rem] h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-cyan-500/20 blur-3xl"></div>
-    <div class="absolute right-[-10rem] top-1/3 h-[28rem] w-[28rem] rounded-full bg-violet-500/20 blur-3xl"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.12),transparent_34rem),linear-gradient(180deg,rgba(2,6,23,0)_0%,#020617_52%)]"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_48%,#ecfeff_100%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:52px_52px]"></div>
   </div>
 
   {{template "header" .}}
@@ -67,22 +63,22 @@
 {{end}}
 
 {{define "header"}}
-<header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/78 backdrop-blur-xl">
+<header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
   <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-    <a class="flex items-center gap-3 text-white" href="/" aria-label="codeatlas.dev home">
-      <img class="h-9 w-9 rounded-lg shadow-glow" src="/static/img/codeatlas-mark.svg" alt="" width="36" height="36">
+    <a class="flex items-center gap-3 text-slate-950" href="/" aria-label="codeatlas.dev home">
+      <img class="h-9 w-9 rounded-lg shadow-soft" src="/static/img/codeatlas-mark.svg" alt="" width="36" height="36">
       <span class="text-lg font-black tracking-tight">codeatlas.dev</span>
     </a>
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-      <nav class="flex gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm font-semibold text-slate-300" aria-label="Primary navigation">
-        <a class="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white {{if isActive .CurrentPath "/topics"}}bg-cyan-300 text-slate-950 hover:bg-cyan-300 hover:text-slate-950{{end}}" href="/topics">Topics</a>
-        <a class="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white {{if isActive .CurrentPath "/roadmaps"}}bg-cyan-300 text-slate-950 hover:bg-cyan-300 hover:text-slate-950{{end}}" href="/roadmaps">Roadmaps</a>
-        <a class="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white {{if isActive .CurrentPath "/search"}}bg-cyan-300 text-slate-950 hover:bg-cyan-300 hover:text-slate-950{{end}}" href="/search">Search</a>
+      <nav class="flex gap-1 rounded-full border border-slate-200 bg-slate-100 p-1 text-sm font-semibold text-slate-600" aria-label="Primary navigation">
+        <a class="rounded-full px-4 py-2 transition hover:bg-white hover:text-slate-950 {{if isActive .CurrentPath "/topics"}}bg-cyan-700 text-white hover:bg-cyan-700 hover:text-white{{end}}" href="/topics">Topics</a>
+        <a class="rounded-full px-4 py-2 transition hover:bg-white hover:text-slate-950 {{if isActive .CurrentPath "/roadmaps"}}bg-cyan-700 text-white hover:bg-cyan-700 hover:text-white{{end}}" href="/roadmaps">Roadmaps</a>
+        <a class="rounded-full px-4 py-2 transition hover:bg-white hover:text-slate-950 {{if isActive .CurrentPath "/search"}}bg-cyan-700 text-white hover:bg-cyan-700 hover:text-white{{end}}" href="/search">Search</a>
       </nav>
       <form class="relative sm:w-64" action="/search" method="get" role="search">
         <label class="sr-only" for="nav-search">Search guides</label>
-        <input id="nav-search" class="h-11 w-full rounded-full border border-white/10 bg-white/5 px-4 pr-11 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300 focus:bg-white/10 focus:ring-4 focus:ring-cyan-300/10" name="q" type="search" placeholder="Search guides..." autocomplete="off">
-        <button class="absolute right-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-cyan-300 text-slate-950 transition hover:bg-cyan-200" type="submit" aria-label="Search">
+        <input id="nav-search" class="h-11 w-full rounded-full border border-slate-200 bg-white px-4 pr-11 text-sm text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100" name="q" type="search" placeholder="Search guides..." autocomplete="off">
+        <button class="absolute right-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-cyan-700 text-white transition hover:bg-cyan-800" type="submit" aria-label="Search">
           <span aria-hidden="true">/</span>
         </button>
       </form>
@@ -92,28 +88,28 @@
 {{end}}
 
 {{define "footer"}}
-<footer class="border-t border-white/10">
-  <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-10 text-sm text-slate-400 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-    <p class="font-semibold text-slate-200">codeatlas.dev</p>
+<footer class="border-t border-slate-200 bg-white/80">
+  <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-10 text-sm text-slate-500 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+    <p class="font-semibold text-slate-900">codeatlas.dev</p>
     <p>System design, DevOps, and production engineering study paths.</p>
   </div>
 </footer>
 {{end}}
 
 {{define "guide-card"}}
-<article class="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.06] p-5 shadow-glow backdrop-blur-xl transition hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[0.08]">
+<article class="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-soft transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg">
   <div class="mb-4 flex flex-wrap items-center gap-2">
-    <a class="rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-1 text-xs font-bold text-cyan-200" href="/topic/{{.CategorySlug}}">{{.Category}}</a>
-    {{if .Difficulty}}<span class="rounded-full border border-violet-300/25 bg-violet-300/10 px-3 py-1 text-xs font-bold text-violet-200">{{.Difficulty}}</span>{{end}}
-    {{if .ReadingTime}}<span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">{{.ReadingTime}}</span>{{end}}
+    <a class="rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-xs font-bold text-cyan-700" href="/topic/{{.CategorySlug}}">{{.Category}}</a>
+    {{if .Difficulty}}<span class="rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700">{{.Difficulty}}</span>{{end}}
+    {{if .ReadingTime}}<span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-600">{{.ReadingTime}}</span>{{end}}
   </div>
-  <h3 class="text-xl font-black tracking-tight text-white">
-    <a class="outline-none transition group-hover:text-cyan-200 focus:text-cyan-200" href="/guides/{{.Slug}}">{{.Title}}</a>
+  <h3 class="text-xl font-black tracking-tight text-slate-950">
+    <a class="outline-none transition group-hover:text-cyan-700 focus:text-cyan-700" href="/guides/{{.Slug}}">{{.Title}}</a>
   </h3>
-  {{if .Description}}<p class="mt-3 flex-1 text-sm leading-6 text-slate-400">{{.Description}}</p>{{end}}
+  {{if .Description}}<p class="mt-3 flex-1 text-sm leading-6 text-slate-600">{{.Description}}</p>{{end}}
   {{if .Tags}}
   <ul class="mt-6 flex flex-wrap gap-2" aria-label="Tags">
-    {{range .Tags}}<li class="rounded-full bg-slate-900/80 px-2.5 py-1 text-xs font-semibold text-slate-400 ring-1 ring-white/10">#{{.}}</li>{{end}}
+    {{range .Tags}}<li class="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600 ring-1 ring-slate-200">#{{.}}</li>{{end}}
   </ul>
   {{end}}
 </article>

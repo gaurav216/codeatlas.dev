@@ -1,5 +1,5 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -10,87 +10,114 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.prose-dark {
-  color: rgb(203 213 225);
+.prose-article {
+  color: rgb(51 65 85);
   font-size: 1.0625rem;
   line-height: 1.8;
 }
 
-.prose-dark > * + * {
+.prose-article > * + * {
   margin-top: 1.25rem;
 }
 
-.prose-dark h1,
-.prose-dark h2,
-.prose-dark h3,
-.prose-dark h4 {
-  color: white;
+.prose-article h1,
+.prose-article h2,
+.prose-article h3,
+.prose-article h4 {
+  color: rgb(15 23 42);
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1.15;
 }
 
-.prose-dark h2 {
+.prose-article h2 {
   margin-top: 2.75rem;
   font-size: clamp(1.75rem, 3vw, 2.35rem);
 }
 
-.prose-dark h3 {
+.prose-article h3 {
   margin-top: 2rem;
   font-size: clamp(1.35rem, 2vw, 1.65rem);
 }
 
-.prose-dark p,
-.prose-dark li {
-  color: rgb(203 213 225);
+.prose-article p,
+.prose-article li {
+  color: rgb(51 65 85);
 }
 
-.prose-dark a {
-  color: rgb(103 232 249);
+.prose-article a {
+  color: rgb(8 145 178);
   font-weight: 700;
   text-decoration: none;
 }
 
-.prose-dark a:hover {
-  color: rgb(165 243 252);
+.prose-article a:hover {
+  color: rgb(14 116 144);
   text-decoration: underline;
 }
 
-.prose-dark ul,
-.prose-dark ol {
+.prose-article ul,
+.prose-article ol {
   padding-left: 1.4rem;
 }
 
-.prose-dark ul {
+.prose-article ul {
   list-style: disc;
 }
 
-.prose-dark ol {
+.prose-article ol {
   list-style: decimal;
 }
 
-.prose-dark blockquote {
-  border-left: 3px solid rgb(34 211 238);
-  color: rgb(226 232 240);
+.prose-article table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid rgb(226 232 240);
+  border-radius: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.prose-article th,
+.prose-article td {
+  border-bottom: 1px solid rgb(226 232 240);
+  padding: 0.8rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose-article th {
+  background: rgb(248 250 252);
+  color: rgb(15 23 42);
+  font-weight: 800;
+}
+
+.prose-article tr:last-child td {
+  border-bottom: 0;
+}
+
+.prose-article blockquote {
+  border-left: 3px solid rgb(8 145 178);
+  color: rgb(30 41 59);
   margin-left: 0;
   padding-left: 1rem;
 }
 
-.prose-dark :not(pre) > code {
-  border: 1px solid rgba(148, 163, 184, 0.22);
+.prose-article :not(pre) > code {
+  border: 1px solid rgb(226 232 240);
   border-radius: 0.45rem;
-  background: rgba(15, 23, 42, 0.86);
-  color: rgb(165 243 252);
+  background: rgb(248 250 252);
+  color: rgb(126 34 206);
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.88em;
   padding: 0.13rem 0.35rem;
 }
 
-.prose-dark pre {
+.prose-article pre {
   overflow-x: auto;
-  border: 1px solid rgba(148, 163, 184, 0.22);
+  border: 1px solid rgb(203 213 225);
   border-radius: 1rem;
-  background: rgba(2, 6, 23, 0.92);
+  background: rgb(15 23 42);
   color: rgb(226 232 240);
   font-size: 0.92rem;
   line-height: 1.7;
@@ -98,7 +125,7 @@ body {
   padding: 1.1rem;
 }
 
-.prose-dark pre code {
+.prose-article pre code {
   background: transparent;
   color: inherit;
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -120,10 +147,10 @@ body {
   right: 0.75rem;
   top: 0.75rem;
   z-index: 2;
-  border: 1px solid rgba(148, 163, 184, 0.24);
+  border: 1px solid rgb(51 65 85);
   border-radius: 999px;
-  background: rgba(15, 23, 42, 0.92);
-  color: rgb(203 213 225);
+  background: rgb(255 255 255);
+  color: rgb(15 23 42);
   cursor: pointer;
   font-size: 0.75rem;
   font-weight: 800;
@@ -133,8 +160,8 @@ body {
 
 .copy-code:hover,
 .copy-code:focus {
-  color: white;
-  border-color: rgba(34, 211, 238, 0.65);
+  color: rgb(14 116 144);
+  border-color: rgb(8 145 178);
   outline: none;
 }
 
@@ -142,15 +169,15 @@ body {
   display: flex;
   justify-content: center;
   overflow-x: auto;
-  border: 1px solid rgba(148, 163, 184, 0.22);
+  border: 1px solid rgb(226 232 240);
   border-radius: 1rem;
-  background: rgba(15, 23, 42, 0.72);
+  background: rgb(248 250 252);
   margin-top: 1.5rem;
   padding: 1.25rem;
 }
 
 .toc-link {
-  border-left: 2px solid rgba(148, 163, 184, 0.18);
+  border-left: 2px solid rgb(226 232 240);
   display: block;
   padding: 0.25rem 0 0.25rem 0.75rem;
   transition: border-color 160ms ease, color 160ms ease;
@@ -158,8 +185,8 @@ body {
 
 .toc-link:hover,
 .toc-link:focus {
-  border-color: rgb(34 211 238);
-  color: rgb(165 243 252);
+  border-color: rgb(8 145 178);
+  color: rgb(14 116 144);
   outline: none;
 }
 
@@ -177,7 +204,7 @@ body {
 .chroma .kd,
 .chroma .kn,
 .chroma .kr {
-  color: rgb(192 132 252);
+  color: rgb(196 181 253);
   font-weight: 700;
 }
 
@@ -190,7 +217,7 @@ body {
 .chroma .c,
 .chroma .c1,
 .chroma .cm {
-  color: rgb(100 116 139);
+  color: rgb(148 163 184);
   font-style: italic;
 }
 
@@ -202,15 +229,15 @@ body {
 
 .chroma .mi,
 .chroma .mf {
-  color: rgb(251 191 36);
+  color: rgb(253 186 116);
 }
 
 @media (max-width: 640px) {
-  .prose-dark {
+  .prose-article {
     font-size: 1rem;
   }
 
-  .prose-dark pre {
+  .prose-article pre {
     border-radius: 0.85rem;
     font-size: 0.85rem;
   }

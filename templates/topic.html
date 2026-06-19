@@ -1,9 +1,9 @@
 {{define "content"}}
 <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-  <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-300/16 via-white/[0.06] to-violet-400/16 p-6 shadow-glow backdrop-blur-xl sm:p-10">
-    <p class="text-sm font-black uppercase tracking-wide text-cyan-300">Topic</p>
-    <h1 class="mt-3 text-4xl font-black tracking-tight text-white sm:text-6xl">{{.Category.Title}}</h1>
-    <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">{{.Category.Count}} guide{{if ne .Category.Count 1}}s{{end}} for this study area.</p>
+  <div class="rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-cyan-50 to-emerald-50 p-6 shadow-soft sm:p-10">
+    <p class="text-sm font-black uppercase tracking-wide text-cyan-700">Topic</p>
+    <h1 class="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">{{.Category.Title}}</h1>
+    <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">{{.Category.Count}} guide{{if ne .Category.Count 1}}s{{end}} for this study area.</p>
   </div>
 
   <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">

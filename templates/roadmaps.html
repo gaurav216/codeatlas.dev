@@ -1,20 +1,20 @@
 {{define "content"}}
 <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
   <div class="max-w-3xl">
-    <p class="text-sm font-black uppercase tracking-wide text-cyan-300">Roadmaps</p>
-    <h1 class="mt-3 text-4xl font-black tracking-tight text-white sm:text-6xl">Study paths for production engineering.</h1>
-    <p class="mt-5 text-lg leading-8 text-slate-300">Use each topic as a path, then loop back when a production problem gives the idea new texture.</p>
+    <p class="text-sm font-black uppercase tracking-wide text-cyan-700">Roadmaps</p>
+    <h1 class="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">Study paths for production engineering.</h1>
+    <p class="mt-5 text-lg leading-8 text-slate-600">Use each topic as a path, then loop back when a production problem gives the idea new texture.</p>
   </div>
 
   <div class="mt-10 grid gap-4">
     {{range .Categories}}
-    <article class="rounded-3xl border border-white/10 bg-white/[0.06] p-6 shadow-glow backdrop-blur-xl">
+    <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
       <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p class="text-sm font-black uppercase tracking-wide text-violet-300">{{.Count}} guide{{if ne .Count 1}}s{{end}}</p>
-          <h2 class="mt-2 text-2xl font-black tracking-tight text-white">{{.Title}}</h2>
+          <p class="text-sm font-black uppercase tracking-wide text-violet-700">{{.Count}} guide{{if ne .Count 1}}s{{end}}</p>
+          <h2 class="mt-2 text-2xl font-black tracking-tight text-slate-950">{{.Title}}</h2>
         </div>
-        <a class="inline-flex min-h-11 items-center justify-center rounded-xl bg-cyan-300 px-5 font-black text-slate-950 transition hover:bg-cyan-200" href="/topic/{{.Slug}}">Open path</a>
+        <a class="inline-flex min-h-11 items-center justify-center rounded-xl bg-cyan-700 px-5 font-black text-white transition hover:bg-cyan-800" href="/topic/{{.Slug}}">Open path</a>
       </div>
     </article>
     {{end}}

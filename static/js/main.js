@@ -59,7 +59,7 @@
     if (window.mermaid) {
       window.mermaid.initialize({
         startOnLoad: false,
-        theme: "dark",
+        theme: "default",
         securityLevel: "strict"
       });
       window.mermaid.run({ querySelector: ".mermaid" });
